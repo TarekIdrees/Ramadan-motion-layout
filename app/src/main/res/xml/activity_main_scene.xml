@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="10000">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/prayer"
+               motion:framePosition="100"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/prayer"
+               motion:framePosition="30"
+               android:scaleX="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/prayer"
+               motion:framePosition="30"
+               android:scaleY="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="5"
+               android:rotationX="-50" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="10"
+               android:alpha="0.1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="20"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="30"
+               android:alpha="0.3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="40"
+               android:alpha="0.4" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="50"
+               android:alpha="0.5" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="60"
+               android:alpha="0.6" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="70"
+               android:alpha="0.7" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="80"
+               android:alpha="0.8" />
+           <KeyAttribute
+               motion:motionTarget="@+id/salat_table"
+               motion:framePosition="90"
+               android:alpha="0.9" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="0"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="10"
+               android:alpha="0.1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="20"
+               android:alpha="0.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="30"
+               android:alpha="0.3" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="40"
+               android:alpha="0.4" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="50"
+               android:alpha="0.5" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="60"
+               android:alpha="0.6" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="70"
+               android:alpha="0.7" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="80"
+               android:alpha="0.8" />
+           <KeyAttribute
+               motion:motionTarget="@+id/ramadan_words"
+               motion:framePosition="90"
+               android:alpha="0.9" />
+           <KeyAttribute
+               motion:motionTarget="@+id/fawanyes"
+               motion:framePosition="0"
+               android:alpha="0" />
+       </KeyFrameSet>
+        <OnSwipe
+            motion:touchAnchorId="@+id/fawanyes"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/fawanyes"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        <Constraint
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            motion:layout_constraintTop_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="parent"
+            android:id="@+id/ramadan_words"
+             />
+        <Constraint
+            android:id="@+id/salat_table"
+            motion:layout_constraintTop_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:id="@+id/prayer" />
+        <Constraint
+            android:id="@+id/ramadan_words"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/fawanyes"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/fawanyes"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+</MotionScene>

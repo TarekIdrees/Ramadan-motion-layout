@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RamdanMotionLayout</string>
+    <string name="jadwal_salat">Prayer Times</string>
+    <string name="fajr">Fajr</string>
+    <string name="fajr_time">4:35 AM</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="dhuhr_time">12:04 PM</string>
+    <string name="asr">Asr</string>
+    <string name="asr_time">3:31 PM</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="maghrib_time">6:07 PM</string>
+    <string name="isha">Isha</string>
+    <string name="isha_time">7:24 PM</string>
+</resources>
